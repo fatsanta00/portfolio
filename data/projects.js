@@ -5,7 +5,7 @@ export const projects = [
     description:
       'A cryptocurrency/investment-style web platform featuring user accounts, balances, deposits, withdrawals, transfers, staking, mined balances, transactions, and an NFT marketplace.',
     tech: ['Web Technologies'],
-    demo: '#',
+    demo: 'https://aberra.vercel.app',
     repo: 'https://github.com/fatsanta00/Aberra',
     img: null,
     featured: true,
