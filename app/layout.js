@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Stephen Bassey | Web Developer',
     description:
       'Portfolio of Stephen Bassey — a Web Developer and Computer Science student building responsive web applications.',
+    url: 'https://bastech.vercel.app',
     siteName: 'Stephen Bassey Portfolio',
     type: 'website',
     locale: 'en_GB',
