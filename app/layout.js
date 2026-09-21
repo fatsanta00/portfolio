@@ -31,6 +31,8 @@ export const viewport = {
   initialScale: 1,
 }
 
+import { Analytics } from '@vercel/analytics/react'
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -45,6 +47,7 @@ export default function RootLayout({ children }) {
       <body>
         <Nav />
         <main id="main-content">{children}</main>
+        <Analytics />
       </body>
     </html>
   )
