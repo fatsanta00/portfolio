@@ -1,25 +1,40 @@
 import '../styles/globals.css'
 import Nav from '../components/Nav'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
-  title: 'Stephen Bassey | Web Developer',
+  title: 'Bassey Stephen | Full-Stack Web Developer · BasTech',
   description:
-    'Portfolio of Stephen Bassey — a Web Developer and Computer Science student building responsive web applications.',
-  keywords: ['web developer', 'HTML', 'CSS', 'JavaScript', 'Python', 'Laravel', 'Stephen Bassey'],
-  authors: [{ name: 'Stephen Bassey', url: 'https://github.com/fatsanta00' }],
+    'Portfolio of Bassey Stephen (BasTech) — Full-stack web developer and Computer Science student building robust web applications with React, Next.js, TypeScript, PHP/Laravel, and PostgreSQL.',
+  keywords: [
+    'Bassey Stephen',
+    'BasTech',
+    'Web Developer Nigeria',
+    'Full-Stack Developer',
+    'Next.js Developer',
+    'React Developer',
+    'TypeScript',
+    'Laravel',
+    'PHP',
+    'PostgreSQL',
+    'Akwa Ibom State University',
+  ],
+  authors: [{ name: 'Bassey Stephen', url: 'https://github.com/fatsanta00' }],
+  metadataBase: new URL('https://bastech.vercel.app'),
   openGraph: {
-    title: 'Stephen Bassey | Web Developer',
+    title: 'Bassey Stephen | Full-Stack Web Developer · BasTech',
     description:
-      'Portfolio of Stephen Bassey — a Web Developer and Computer Science student building responsive web applications.',
+      'Portfolio of Bassey Stephen — Full-stack web applications, custom website builds, responsive interfaces, and database integrations.',
     url: 'https://bastech.vercel.app',
-    siteName: 'Stephen Bassey Portfolio',
+    siteName: 'BasTech — Bassey Stephen',
     type: 'website',
-    locale: 'en_GB',
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stephen Bassey | Web Developer',
-    description: 'Portfolio of Stephen Bassey, Web Developer and Computer Science student.',
+    title: 'Bassey Stephen | Full-Stack Web Developer · BasTech',
+    description:
+      'Full-stack web developer and Computer Science student building robust web applications with Next.js, React, TypeScript, and Laravel.',
   },
   icons: {
     icon: '/favicon.svg',
@@ -29,9 +44,8 @@ export const metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#090b10',
 }
-
-import { Analytics } from '@vercel/analytics/react'
 
 export default function RootLayout({ children }) {
   return (
@@ -40,11 +54,14 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Nav />
         <main id="main-content">{children}</main>
         <Analytics />

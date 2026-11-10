@@ -1,110 +1,153 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function ProjectModal({ project, onClose }) {
-  // Close on Escape
+  const modalRef = useRef(null)
+
   useEffect(() => {
-    const onKey = (e) => { if (e.key === 'Escape') onClose() }
-    document.addEventListener('keydown', onKey)
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose()
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
     document.body.style.overflow = 'hidden'
+
+    if (modalRef.current) {
+      modalRef.current.focus()
+    }
+
     return () => {
-      document.removeEventListener('keydown', onKey)
+      document.removeEventListener('keydown', handleKeyDown)
       document.body.style.overflow = ''
     }
   }, [onClose])
 
-  const hasDemo = project.demo && project.demo !== '#'
-  const hasRepo = project.repo && project.repo !== '#'
+  const hasDemo = Boolean(project.demo && project.demo !== '#')
+  const hasRepo = Boolean(project.repo && project.repo !== '#')
 
   return (
-    /* Backdrop */
     <div
-      className="modal-backdrop"
+      className="modal-overlay"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-label={`${project.title} details`}
+      aria-labelledby="modal-project-title"
     >
-      {/* Panel — stop propagation so click inside doesn't close */}
       <div
-        className="modal-panel"
+        className="modal-container"
         onClick={(e) => e.stopPropagation()}
+        tabIndex={-1}
+        ref={modalRef}
       >
-        {/* Header */}
-        <div className="modal-header">
-          <div>
-            <div className="modal-status-row">
-              {project.featured && (
-                <span className="modal-badge modal-badge--featured">Featured</span>
-              )}
-              <span className={`modal-badge modal-badge--status modal-badge--${(project.status || '').toLowerCase()}`}>
-                {project.status || 'Project'}
-              </span>
-            </div>
-            <h2 className="modal-title">{project.title}</h2>
+        {/* Modal Topbar */}
+        <div className="modal-topbar">
+          <div className="modal-meta-pills">
+            <span className={`status-tag status-tag--${(project.status || 'concept').toLowerCase()}`}>
+              {project.status || 'Project'}
+            </span>
+            <span className="scope-tag">{project.scope || project.category}</span>
           </div>
+
           <button
-            className="modal-close"
+            type="button"
+            className="modal-close-button"
             onClick={onClose}
-            aria-label="Close project details"
+            aria-label="Close project modal (Press Escape)"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
-              <path d="M18 6L6 18M6 6l12 12"/>
+            <span className="close-text" aria-hidden="true">ESC</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <path d="M18 6L6 18M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        {/* Body */}
-        <div className="modal-body">
-          <p className="modal-desc">{project.longDescription || project.description}</p>
+        {/* Modal Header */}
+        <div className="modal-header-section">
+          <h2 id="modal-project-title" className="modal-main-title">
+            {project.title}
+          </h2>
+          <p className="modal-tagline">{project.tagline || project.category}</p>
+        </div>
 
+        {/* Modal Content Body */}
+        <div className="modal-scroll-body">
+          {/* Overview */}
+          <div className="modal-content-block">
+            <h3 className="modal-block-label">Overview &amp; Implementation</h3>
+            <p className="modal-body-text">{project.longDescription || project.description}</p>
+          </div>
+
+          {/* Architecture */}
+          {project.architecture && (
+            <div className="modal-content-block">
+              <h3 className="modal-block-label">Architecture &amp; Data Pipeline</h3>
+              <div className="modal-arch-box">
+                <code>{project.architecture}</code>
+              </div>
+            </div>
+          )}
+
+          {/* Key Engineering Features */}
           {project.highlights && project.highlights.length > 0 && (
-            <div className="modal-section">
-              <h3 className="modal-section-title">Key features</h3>
-              <ul className="modal-highlights">
-                {project.highlights.map((h) => (
-                  <li key={h}>{h}</li>
+            <div className="modal-content-block">
+              <h3 className="modal-block-label">Key Engineering Features</h3>
+              <ul className="modal-specs-list">
+                {project.highlights.map((item, index) => (
+                  <li key={index} className="modal-spec-item">
+                    <span className="spec-bullet" aria-hidden="true">—</span>
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ul>
             </div>
           )}
 
-          <div className="modal-section">
-            <h3 className="modal-section-title">Technologies</h3>
-            <ul className="tech-list modal-tech-list" aria-label="Technologies used">
-              {project.tech.map((t) => (
-                <li key={t}>{t}</li>
+          {/* Verified Technologies */}
+          <div className="modal-content-block">
+            <h3 className="modal-block-label">Verified Tech Stack</h3>
+            <div className="modal-tech-grid" aria-label="Verified technologies">
+              {project.tech.map((tech) => (
+                <span key={tech} className="tech-spec-badge">
+                  {tech}
+                </span>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
-        {/* Footer */}
-        {(hasDemo || hasRepo) && (
-          <div className="modal-footer">
-            {hasDemo && (
-              <a
-                className="btn btn--primary"
-                href={project.demo}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                View live ↗
-              </a>
-            )}
-            {hasRepo && (
-              <a
-                className="btn btn--outline"
-                href={project.repo}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Source code ↗
-              </a>
-            )}
-          </div>
-        )}
+        {/* Modal Footer Actions */}
+        <div className="modal-footer-actions">
+          {hasDemo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="btn-solid"
+            >
+              Open Live Deployment ↗
+            </a>
+          )}
+          {hasRepo && (
+            <a
+              href={project.repo}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="btn-outline"
+            >
+              Inspect Source Code (GitHub) ↗
+            </a>
+          )}
+          {!hasDemo && !hasRepo && (
+            <span className="modal-internal-notice">
+              Internal / Academic build — source repository private or offline.
+            </span>
+          )}
+          <button type="button" className="modal-secondary-close" onClick={onClose}>
+            Close
+          </button>
+        </div>
       </div>
     </div>
   )

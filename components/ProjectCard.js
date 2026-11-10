@@ -5,92 +5,165 @@ import dynamic from 'next/dynamic'
 
 const ProjectModal = dynamic(() => import('./ProjectModal'), { ssr: false })
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, index, isFeatured = false }) {
   const [modalOpen, setModalOpen] = useState(false)
-  const hasDemo = project.demo && project.demo !== '#'
-  const hasRepo = project.repo && project.repo !== '#'
+  const hasDemo = Boolean(project.demo && project.demo !== '#')
+  const hasRepo = Boolean(project.repo && project.repo !== '#')
 
-  return (
-    <>
-      <article
-        className={`card${project.featured ? ' card--featured' : ''}`}
-        aria-label={`Project: ${project.title}`}
-      >
-        {/* Image / placeholder */}
-        <div className="card-media" aria-hidden="true">
-          {project.img ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={project.img}
-              alt={`${project.title} screenshot`}
-              className="card-img"
-            />
-          ) : (
-            <div className="card-img-placeholder">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-                <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
-                <path d="M21 15l-5-5L5 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span>{project.title[0]}</span>
+  if (isFeatured) {
+    return (
+      <>
+        <article className="featured-case-card" aria-label={`Featured Project: ${project.title}`}>
+          <div className="featured-case-top">
+            <div className="featured-case-meta">
+              <span className="case-index" aria-hidden="true">
+                0{index + 1}
+              </span>
+              <div className="case-meta-group">
+                <span className={`status-badge status-badge--${(project.status || 'live').toLowerCase()}`}>
+                  <span className="status-dot" aria-hidden="true"></span>
+                  {project.status || 'Live'}
+                </span>
+                <span className="category-tag">{project.category}</span>
+              </div>
+            </div>
+            <span className="scope-indicator">{project.scope}</span>
+          </div>
+
+          <div className="featured-case-header">
+            <h3 className="featured-case-title">{project.title}</h3>
+            <p className="featured-case-tagline">{project.tagline}</p>
+          </div>
+
+          <p className="featured-case-desc">{project.description}</p>
+
+          {project.highlights && project.highlights.length > 0 && (
+            <div className="featured-case-highlights">
+              <span className="highlights-label">Key Capabilities:</span>
+              <ul className="highlights-list">
+                {project.highlights.slice(0, 3).map((highlight, hIdx) => (
+                  <li key={hIdx} className="highlight-item">
+                    <span className="highlight-dash" aria-hidden="true">—</span>
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
 
-          <div className="card-badges">
-            {project.featured && (
-              <span className="card-badge card-badge--featured">Featured</span>
-            )}
-            {project.status && (
-              <span className={`card-badge card-badge--status card-badge--${project.status.toLowerCase()}`}>
-                {project.status}
-              </span>
-            )}
+          <div className="featured-case-bottom">
+            <div className="featured-tech-row" aria-label="Key technologies">
+              {project.tech.map((t) => (
+                <span key={t} className="tech-tag">
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            <div className="case-actions-row">
+              <button
+                type="button"
+                className="btn-text-action"
+                onClick={() => setModalOpen(true)}
+                aria-label={`View complete technical overview for ${project.title}`}
+              >
+                Architecture &amp; Specs →
+              </button>
+
+              <div className="external-links-group">
+                {hasDemo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="btn-action-primary"
+                    aria-label={`Open live application for ${project.title}`}
+                  >
+                    Live Demo ↗
+                  </a>
+                )}
+                {hasRepo && (
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="btn-action-secondary"
+                    aria-label={`View GitHub repository for ${project.title}`}
+                  >
+                    GitHub ↗
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
+        </article>
+
+        {modalOpen && (
+          <ProjectModal project={project} onClose={() => setModalOpen(false)} />
+        )}
+      </>
+    )
+  }
+
+  // Standard row / card presentation for secondary & concept projects
+  return (
+    <>
+      <article className="compact-project-card" aria-label={`Project: ${project.title}`}>
+        <div className="compact-card-header">
+          <div>
+            <div className="compact-meta">
+              <span className={`status-badge-sm status-badge-sm--${(project.status || 'concept').toLowerCase()}`}>
+                {project.status || 'Complete'}
+              </span>
+              <span className="compact-category">{project.category}</span>
+            </div>
+            <h4 className="compact-title">{project.title}</h4>
+          </div>
+          <button
+            type="button"
+            className="compact-inspect-btn"
+            onClick={() => setModalOpen(true)}
+            aria-label={`Inspect ${project.title}`}
+          >
+            Details →
+          </button>
         </div>
 
-        <div className="card-body">
-          <h3 className="card-title">{project.title}</h3>
-          <p className="card-desc">{project.description}</p>
+        <p className="compact-desc">{project.description}</p>
 
-          <ul className="tech-list" aria-label="Technologies used">
+        <div className="compact-footer">
+          <div className="compact-tech-list">
             {project.tech.map((t) => (
-              <li key={t}>{t}</li>
+              <span key={t} className="tech-tag-sm">
+                {t}
+              </span>
             ))}
-          </ul>
-
-          <div className="card-actions">
-            <button
-              className="link-details"
-              onClick={() => setModalOpen(true)}
-              aria-label={`View details for ${project.title}`}
-            >
-              Details →
-            </button>
-
-            {hasDemo && (
-              <a
-                className="link-demo"
-                href={project.demo}
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label={`Live demo for ${project.title}`}
-              >
-                Live ↗
-              </a>
-            )}
-
-            {hasRepo && (
-              <a
-                className="link-repo"
-                href={project.repo}
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label={`Source code for ${project.title}`}
-              >
-                GitHub
-              </a>
-            )}
           </div>
+
+          {(hasDemo || hasRepo) && (
+            <div className="compact-actions">
+              {hasDemo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="compact-link"
+                >
+                  Live ↗
+                </a>
+              )}
+              {hasRepo && (
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="compact-link"
+                >
+                  Code ↗
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </article>
 
