@@ -3,19 +3,24 @@ import ProjectsList from '../components/ProjectsList'
 /* ─── Skills data ──────────────────────────────────────────── */
 const skillGroups = [
   {
-    label: 'Web Development',
+    label: 'Frontend',
     icon: '🖥',
-    skills: ['HTML', 'CSS', 'JavaScript', 'Python', 'Laravel', 'Responsive Web Development'],
+    skills: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Responsive Web Design'],
   },
   {
-    label: 'Tech & Tools',
+    label: 'Backend & Databases',
+    icon: '⚙️',
+    skills: ['PHP', 'Laravel', 'Python', 'MySQL'],
+  },
+  {
+    label: 'Tools & Environment',
     icon: '🔧',
-    skills: ['Linux', 'LaTeX', 'QBasic', 'Microsoft Office'],
+    skills: ['Git', 'Linux', 'LaTeX', 'QBasic', 'Microsoft Office'],
   },
   {
-    label: 'Soft Skills',
+    label: 'Communication',
     icon: '💬',
-    skills: ['Web Writing', 'Communication', 'Teamwork'],
+    skills: ['Web Writing & Content', 'Technical Writing', 'Customer Service', 'Teamwork'],
   },
 ]
 
@@ -27,7 +32,7 @@ const experience = [
     company: 'Freelance / Self-employed',
     period: 'Approx. 2 years',
     summary:
-      'Developed and maintained websites and web projects for clients and personal projects, working primarily with HTML, CSS, JavaScript, Python, and Laravel. Experience includes building responsive interfaces, cloning existing websites for practice, troubleshooting issues, and improving web functionality.',
+      'Developed and maintained websites and web projects for clients and personal projects, working primarily with HTML, CSS, JavaScript, PHP, Python, and Laravel. Work included building responsive interfaces, troubleshooting issues, and improving web functionality.',
   },
   {
     id: 'exp2',
@@ -35,7 +40,7 @@ const experience = [
     company: 'Freelance / Self-employed',
     period: 'Approx. 2 years',
     summary:
-      'Created written web content and worked on online content projects, with an emphasis on clear communication, research, and engaging written material.',
+      'Created written web content and worked on online content projects with a focus on clear communication, research, and engaging written material.',
   },
   {
     id: 'exp3',
@@ -43,7 +48,7 @@ const experience = [
     company: 'N/A',
     period: 'Approx. 6 months',
     summary:
-      'Worked in a customer-facing sales role, developing communication, customer service, and sales skills.',
+      'Worked in a customer-facing sales role, developing communication, customer service, and interpersonal skills.',
   },
 ]
 
@@ -55,13 +60,15 @@ export default function Home() {
         <div className="hero-inner">
           <p className="hero-eyebrow">👋 Hello, I&apos;m</p>
           <h1 className="hero-name">Stephen Bassey</h1>
-          <p className="hero-role">Computer Science Student & Web Developer</p>
+          <p className="hero-role">Web Developer &amp; CS Student</p>
           <p className="hero-desc">
-            I build responsive web interfaces, solve technical problems, and create clear, effective content. With a background spanning web development, writing, and customer service, I focus on building practical solutions that work well for users.
+            I build responsive, functional websites using HTML, CSS, JavaScript, PHP, and Laravel.
+            Currently studying Computer Science at Akwa Ibom State University
+            and open to freelance work and remote opportunities.
           </p>
           <div className="hero-actions">
             <a className="btn btn--primary" href="#projects">
-              View my work
+              See my projects
             </a>
             <a className="btn btn--outline" href="#contact">
               Get in touch
@@ -108,7 +115,7 @@ export default function Home() {
           <div className="section-header">
             <h2 className="section-title">Projects</h2>
             <p className="section-subtitle">
-              A selection of web platforms and experiences I&apos;ve built.
+              Web platforms and experiences I&apos;ve built. Click any card for a detailed breakdown.
             </p>
           </div>
           <ProjectsList />
@@ -120,7 +127,7 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Skills</h2>
-            <p className="section-subtitle">Technologies and tools I work with.</p>
+            <p className="section-subtitle">Technologies and tools I work with regularly.</p>
           </div>
           <div className="skills-grid">
             {skillGroups.map((g) => (
@@ -147,33 +154,35 @@ export default function Home() {
             <div className="about-text">
               <h2 className="section-title">About me</h2>
               <p>
-                I&apos;m a Web Developer and Software Engineer with experience in creating digital web content,
-                building responsive interfaces, and working in customer-facing roles. I take pride in combining
-                my technical skills with strong communication and teamwork abilities.
+                I&apos;m a web developer and Computer Science student with hands-on experience building
+                responsive websites and web platforms. My background combines frontend development,
+                backend work with PHP and Laravel, web writing, and customer-facing roles — giving me
+                a broad view of what makes a web product actually work for real people.
               </p>
               <p>
-                When I&apos;m not writing code, I enjoy writing, reading fiction, travelling, gaming,
-                and learning about new and niche areas of technology.
+                Outside of coding I enjoy writing, reading fiction, travelling, gaming, and exploring
+                niche areas of technology.
               </p>
               <p>
-                I am currently open to new opportunities, particularly remote roles in web development,
-                writing, customer service, sales, and related digital fields.
+                I am <strong className="availability-badge">currently available</strong> for remote
+                opportunities in web development, writing, and related digital roles. If you have a
+                project or role that fits, I&apos;d like to hear about it.
               </p>
-              
+
               <div className="about-edu">
                 <h3>Education</h3>
-                <p>
-                  <strong>BSc Computer Science</strong><br/>
-                  Akwa Ibom State University<br/>
-                  <em>Currently studying; expected graduation in 2028.</em>
-                </p>
-                <p>
-                  <strong>Secondary Education (WAEC)</strong>
-                </p>
+                <div className="edu-item">
+                  <p className="edu-degree">BSc Computer Science</p>
+                  <p className="edu-school">Akwa Ibom State University</p>
+                  <p className="edu-period">Currently studying · Expected graduation 2028</p>
+                </div>
+                <div className="edu-item">
+                  <p className="edu-degree">Secondary Education (WAEC)</p>
+                </div>
               </div>
             </div>
 
-            {/* Avatar placeholder */}
+            {/* Avatar / identity block */}
             <div className="about-avatar" aria-hidden="true">
               <div className="avatar-placeholder">
                 <span>SB</span>
@@ -189,7 +198,7 @@ export default function Home() {
           <div className="section-header">
             <h2 className="section-title">Experience</h2>
             <p className="section-subtitle">
-              My recent professional history and freelance work.
+              My professional history and freelance work.
             </p>
           </div>
           <ol className="timeline" aria-label="Work experience">
@@ -217,8 +226,7 @@ export default function Home() {
             <div className="section-header section-header--center">
               <h2 className="section-title">Get in touch</h2>
               <p className="section-subtitle">
-                Whether you have a project in mind, a role to fill, or just want to say hi —
-                my inbox is always open.
+                Have a project, a role, or just want to say hi? My inbox is open.
               </p>
             </div>
 

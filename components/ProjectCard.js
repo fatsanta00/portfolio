@@ -1,45 +1,72 @@
+'use client'
+
+import { useState } from 'react'
+import dynamic from 'next/dynamic'
+
+const ProjectModal = dynamic(() => import('./ProjectModal'), { ssr: false })
+
 export default function ProjectCard({ project }) {
+  const [modalOpen, setModalOpen] = useState(false)
   const hasDemo = project.demo && project.demo !== '#'
   const hasRepo = project.repo && project.repo !== '#'
 
   return (
-    <article className="card" aria-label={`Project: ${project.title}`}>
-      {/* Image / placeholder region */}
-      <div className="card-media" aria-hidden="true">
-        {project.img ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={project.img}
-            alt={`${project.title} screenshot`}
-            className="card-img"
-          />
-        ) : (
-          <div className="card-img-placeholder">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-              <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
-              <path d="M21 15l-5-5L5 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span>No preview yet</span>
+    <>
+      <article
+        className={`card${project.featured ? ' card--featured' : ''}`}
+        aria-label={`Project: ${project.title}`}
+      >
+        {/* Image / placeholder */}
+        <div className="card-media" aria-hidden="true">
+          {project.img ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={project.img}
+              alt={`${project.title} screenshot`}
+              className="card-img"
+            />
+          ) : (
+            <div className="card-img-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.5"/>
+                <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
+                <path d="M21 15l-5-5L5 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span>{project.title[0]}</span>
+            </div>
+          )}
+
+          <div className="card-badges">
+            {project.featured && (
+              <span className="card-badge card-badge--featured">Featured</span>
+            )}
+            {project.status && (
+              <span className={`card-badge card-badge--status card-badge--${project.status.toLowerCase()}`}>
+                {project.status}
+              </span>
+            )}
           </div>
-        )}
-        {project.featured && (
-          <span className="card-badge">Featured</span>
-        )}
-      </div>
+        </div>
 
-      <div className="card-body">
-        <h3 className="card-title">{project.title}</h3>
-        <p className="card-desc">{project.description}</p>
+        <div className="card-body">
+          <h3 className="card-title">{project.title}</h3>
+          <p className="card-desc">{project.description}</p>
 
-        <ul className="tech-list" aria-label="Technologies used">
-          {project.tech.map((t) => (
-            <li key={t}>{t}</li>
-          ))}
-        </ul>
+          <ul className="tech-list" aria-label="Technologies used">
+            {project.tech.map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </ul>
 
-        {(hasDemo || hasRepo) && (
           <div className="card-actions">
+            <button
+              className="link-details"
+              onClick={() => setModalOpen(true)}
+              aria-label={`View details for ${project.title}`}
+            >
+              Details →
+            </button>
+
             {hasDemo && (
               <a
                 className="link-demo"
@@ -51,6 +78,7 @@ export default function ProjectCard({ project }) {
                 Live ↗
               </a>
             )}
+
             {hasRepo && (
               <a
                 className="link-repo"
@@ -63,8 +91,12 @@ export default function ProjectCard({ project }) {
               </a>
             )}
           </div>
-        )}
-      </div>
-    </article>
+        </div>
+      </article>
+
+      {modalOpen && (
+        <ProjectModal project={project} onClose={() => setModalOpen(false)} />
+      )}
+    </>
   )
 }
