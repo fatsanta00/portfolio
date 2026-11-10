@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <!-- Window frame background -->
+  <rect width="960" height="540" rx="12" fill="#03160e"/>
+  <rect x="0.5" y="0.5" width="959" height="539" rx="11.5" stroke="#064e3b" stroke-width="1"/>
+
+  <!-- Browser Chrome Topbar -->
+  <rect width="960" height="42" fill="#042317"/>
+  <line x1="0" y1="42" x2="960" y2="42" stroke="#064e3b" stroke-width="1"/>
+  <circle cx="24" cy="21" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="21" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="21" r="5" fill="#10b981"/>
+  <rect x="180" y="10" width="600" height="22" rx="4" fill="#02140d" stroke="#064e3b" stroke-width="1"/>
+  <text x="480" y="25" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">https://nacos-campus-quest.app/checkpoint/04</text>
+
+  <!-- Event Header -->
+  <rect y="42" width="960" height="60" fill="#052c1e"/>
+  <line x1="0" y1="102" x2="960" y2="102" stroke="#064e3b" stroke-width="1"/>
+  <rect x="36" y="56" width="32" height="32" rx="6" fill="#10b981"/>
+  <text x="52" y="78" fill="#02140d" font-family="system-ui, sans-serif" font-size="16" font-weight="900" text-anchor="middle">🔍</text>
+  <text x="80" y="72" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">NACOS Campus Quest</text>
+  <text x="80" y="88" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="11">AKSU Chapter Scavenger Hunt &amp; Quiz Engine</text>
+
+  <rect x="764" y="56" width="160" height="32" rx="4" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+  <text x="844" y="77" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" text-anchor="middle">Team ByteRiders (Score: 480)</text>
+
+  <!-- Checkpoint Status Grid -->
+  <rect x="36" y="120" width="430" height="390" rx="8" fill="#052418" stroke="#064e3b" stroke-width="1"/>
+  <text x="60" y="152" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600">ACTIVE CHECKPOINT 04 OF 07</text>
+  <text x="60" y="184" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Faculty of Computing Labs</text>
+  <text x="60" y="214" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="13" line-height="1.5">You scanned QR station #4. Solve the network subnetting puzzle below to unlock the coordinates to Station 5.</text>
+
+  <!-- QR Visual Icon simulation -->
+  <rect x="60" y="246" width="140" height="140" rx="8" fill="#02140d" stroke="#10b981" stroke-width="2"/>
+  <rect x="76" y="262" width="36" height="36" fill="#10b981"/>
+  <rect x="148" y="262" width="36" height="36" fill="#10b981"/>
+  <rect x="76" y="334" width="36" height="36" fill="#10b981"/>
+  <rect x="124" y="310" width="20" height="20" fill="#34d399"/>
+  <rect x="156" y="342" width="20" height="20" fill="#34d399"/>
+  
+  <text x="220" y="280" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Station Verification</text>
+  <text x="220" y="304" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="12">✓ Checkpoint GPS Confirmed</text>
+  <text x="220" y="328" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="12">Time at Station: 02m 14s</text>
+  <text x="220" y="352" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="12">Base Reward: +150 Pts</text>
+
+  <rect x="60" y="416" width="382" height="42" rx="6" fill="#10b981"/>
+  <text x="251" y="442" fill="#02140d" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Submit Station Solution →</text>
+
+  <!-- Right Leaderboard Column -->
+  <rect x="494" y="120" width="430" height="390" rx="8" fill="#052418" stroke="#064e3b" stroke-width="1"/>
+  <text x="518" y="152" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600">LIVE CAMPUS LEADERBOARD</text>
+  <text x="518" y="184" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Real-Time Team Rankings</text>
+
+  <!-- Rank 1 -->
+  <rect x="518" y="206" width="382" height="52" rx="6" fill="#083a27"/>
+  <text x="536" y="238" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700">#1</text>
+  <text x="570" y="238" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">CyberWarriors (4/7 CP)</text>
+  <text x="880" y="238" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" text-anchor="end">590 pts</text>
+
+  <!-- Rank 2 (User) -->
+  <rect x="518" y="268" width="382" height="52" rx="6" fill="#0a4630" stroke="#10b981" stroke-width="1"/>
+  <text x="536" y="300" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700">#2</text>
+  <text x="570" y="300" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">ByteRiders (You)</text>
+  <text x="880" y="300" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" text-anchor="end">480 pts</text>
+
+  <!-- Rank 3 -->
+  <rect x="518" y="330" width="382" height="52" rx="6" fill="#083a27"/>
+  <text x="536" y="362" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="16">#3</text>
+  <text x="570" y="362" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14">KernelKnights (3/7 CP)</text>
+  <text x="880" y="362" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="14" text-anchor="end">410 pts</text>
+
+  <!-- Rank 4 -->
+  <rect x="518" y="392" width="382" height="52" rx="6" fill="#083a27"/>
+  <text x="536" y="424" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="16">#4</text>
+  <text x="570" y="424" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14">StackOverflow Tribe</text>
+  <text x="880" y="424" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="14" text-anchor="end">350 pts</text>
+</svg>

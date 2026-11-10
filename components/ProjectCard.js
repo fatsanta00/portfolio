@@ -32,8 +32,38 @@ export default function ProjectCard({ project, index, isFeatured = false }) {
 
           <div className="featured-case-header">
             <h3 className="featured-case-title">{project.title}</h3>
-            <p className="featured-case-tagline">{project.tagline}</p>
+            {project.tagline && <p className="featured-case-tagline">{project.tagline}</p>}
           </div>
+
+          {/* Genuine Project Preview Area */}
+          {project.img && (
+            <div
+              className="featured-preview-box"
+              onClick={() => setModalOpen(true)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setModalOpen(true)
+                }
+              }}
+              aria-label={`View enlarged interface preview and architecture for ${project.title}`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={project.img}
+                alt={project.imgAlt || `${project.title} live interface preview`}
+                className="featured-preview-img"
+                loading="lazy"
+                width={960}
+                height={540}
+              />
+              <span className="preview-hover-hint" aria-hidden="true">
+                Click to inspect full architecture ↗
+              </span>
+            </div>
+          )}
 
           <p className="featured-case-desc">{project.description}</p>
 
@@ -109,6 +139,32 @@ export default function ProjectCard({ project, index, isFeatured = false }) {
   return (
     <>
       <article className="compact-project-card" aria-label={`Project: ${project.title}`}>
+        {project.img && (
+          <div
+            className="compact-preview-box"
+            onClick={() => setModalOpen(true)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                setModalOpen(true)
+              }
+            }}
+            aria-label={`View preview for ${project.title}`}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={project.img}
+              alt={project.imgAlt || `${project.title} interface preview`}
+              className="compact-preview-img"
+              loading="lazy"
+              width={480}
+              height={270}
+            />
+          </div>
+        )}
+
         <div className="compact-card-header">
           <div>
             <div className="compact-meta">

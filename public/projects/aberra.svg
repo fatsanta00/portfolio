@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <!-- Window frame background -->
+  <rect width="960" height="540" rx="12" fill="#140618"/>
+  <rect x="0.5" y="0.5" width="959" height="539" rx="11.5" stroke="#3d1542" stroke-width="1"/>
+
+  <!-- Browser Chrome Topbar -->
+  <rect width="960" height="42" fill="#1f0925"/>
+  <line x1="0" y1="42" x2="960" y2="42" stroke="#3d1542" stroke-width="1"/>
+  <circle cx="24" cy="21" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="21" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="21" r="5" fill="#10b981"/>
+  <rect x="180" y="10" width="600" height="22" rx="4" fill="#120416" stroke="#3d1542" stroke-width="1"/>
+  <text x="480" y="25" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">https://aberra.vercel.app/dashboard</text>
+
+  <!-- Application Navbar -->
+  <rect y="42" width="960" height="56" fill="#240a2c"/>
+  <line x1="0" y1="98" x2="960" y2="98" stroke="#3d1542" stroke-width="1"/>
+  
+  <!-- Aberra Brand -->
+  <rect x="36" y="56" width="28" height="28" rx="6" fill="#a855f7"/>
+  <text x="50" y="74" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="800" text-anchor="middle">A</text>
+  <text x="76" y="74" fill="#f3e8ff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Aberra</text>
+  <text x="134" y="74" fill="#a855f7" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Mining &amp; Investments</text>
+
+  <!-- Navigation items -->
+  <text x="420" y="74" fill="#f3e8ff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Dashboard</text>
+  <text x="510" y="74" fill="#c084fc" font-family="system-ui, sans-serif" font-size="13">Staking Pool</text>
+  <text x="610" y="74" fill="#c084fc" font-family="system-ui, sans-serif" font-size="13">NFT Market</text>
+  <text x="705" y="74" fill="#c084fc" font-family="system-ui, sans-serif" font-size="13">Transactions</text>
+
+  <!-- User Account button -->
+  <rect x="816" y="54" width="108" height="32" rx="6" fill="#9333ea"/>
+  <text x="870" y="74" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Wallet Connected</text>
+
+  <!-- Main Content Dashboard -->
+  <!-- Stats Cards Row -->
+  <!-- Card 1: Total Portfolio Value -->
+  <rect x="36" y="118" width="270" height="110" rx="8" fill="#1d0724" stroke="#4a1952" stroke-width="1"/>
+  <text x="56" y="146" fill="#c084fc" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Total Portfolio Balance</text>
+  <text x="56" y="182" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="700">$24,680.50</text>
+  <text x="56" y="210" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12">▲ +4.82% Today (+$1,135)</text>
+
+  <!-- Card 2: Active Staking -->
+  <rect x="326" y="118" width="270" height="110" rx="8" fill="#1d0724" stroke="#4a1952" stroke-width="1"/>
+  <text x="346" y="146" fill="#c084fc" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Active Staked Assets</text>
+  <text x="346" y="182" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="700">8.450 SOL</text>
+  <text x="346" y="210" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="12">Est. APY: 12.4% · Lock 30d</text>
+
+  <!-- Card 3: Mined Ledger Increment -->
+  <rect x="616" y="118" width="308" height="110" rx="8" fill="#1d0724" stroke="#4a1952" stroke-width="1"/>
+  <text x="636" y="146" fill="#c084fc" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Mined Balance / Yield</text>
+  <text x="636" y="182" fill="#34d399" font-family="system-ui, sans-serif" font-size="28" font-weight="700">+1,420.00 USDT</text>
+  <text x="636" y="210" fill="#e9d5ff" font-family="'JetBrains Mono', monospace" font-size="12">Next automated payout in 04:12</text>
+
+  <!-- Lower Section: Left Live Chart / Right Action Panel -->
+  <rect x="36" y="248" width="560" height="260" rx="8" fill="#1d0724" stroke="#4a1952" stroke-width="1"/>
+  <text x="56" y="278" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Balance &amp; Mining Progression</text>
+  <text x="460" y="278" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="12">1D  1W  [1M]  1Y  ALL</text>
+
+  <!-- Chart lines -->
+  <path d="M 60 440 Q 140 420 200 380 T 320 360 T 440 330 T 560 300" fill="none" stroke="#a855f7" stroke-width="3"/>
+  <path d="M 60 440 Q 140 420 200 380 T 320 360 T 440 330 T 560 300 L 560 470 L 60 470 Z" fill="url(#aberraGrad)" opacity="0.3"/>
+  <line x1="60" y1="470" x2="560" y2="470" stroke="#3d1542" stroke-width="1"/>
+
+  <!-- Right: Fast Actions & Recent Transactions -->
+  <rect x="616" y="248" width="308" height="260" rx="8" fill="#1d0724" stroke="#4a1952" stroke-width="1"/>
+  <text x="636" y="278" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Recent Transactions</text>
+
+  <!-- Tx 1 -->
+  <rect x="636" y="300" width="268" height="42" rx="4" fill="#280c32"/>
+  <text x="648" y="325" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="13">Deposit (USDT)</text>
+  <text x="892" y="325" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" text-anchor="end">+$2,500.00</text>
+
+  <!-- Tx 2 -->
+  <rect x="636" y="352" width="268" height="42" rx="4" fill="#280c32"/>
+  <text x="648" y="377" fill="#e9d5ff" font-family="'JetBrains Mono', monospace" font-size="13">Staking Reward</text>
+  <text x="892" y="377" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" text-anchor="end">+0.145 SOL</text>
+
+  <!-- Tx 3 -->
+  <rect x="636" y="404" width="268" height="42" rx="4" fill="#280c32"/>
+  <text x="648" y="429" fill="#e9d5ff" font-family="'JetBrains Mono', monospace" font-size="13">Transfer Out</text>
+  <text x="892" y="429" fill="#f87171" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" text-anchor="end">-$450.00</text>
+
+  <!-- Action button bottom -->
+  <rect x="636" y="456" width="268" height="38" rx="6" fill="#a855f7"/>
+  <text x="770" y="480" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Execute Deposit / Transfer →</text>
+
+  <defs>
+    <linearGradient id="aberraGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#140618" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <!-- Window frame background -->
+  <rect width="960" height="540" rx="12" fill="#081426"/>
+  <rect x="0.5" y="0.5" width="959" height="539" rx="11.5" stroke="#173153" stroke-width="1"/>
+
+  <!-- Browser Chrome Topbar -->
+  <rect width="960" height="42" fill="#0a1c36"/>
+  <line x1="0" y1="42" x2="960" y2="42" stroke="#173153" stroke-width="1"/>
+  <circle cx="24" cy="21" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="21" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="21" r="5" fill="#10b981"/>
+  <rect x="180" y="10" width="600" height="22" rx="4" fill="#07152a" stroke="#173153" stroke-width="1"/>
+  <text x="480" y="25" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">https://ihcdt-scholarship-portal.edu.ng/apply/step-3</text>
+
+  <!-- Institutional Portal Header -->
+  <rect y="42" width="960" height="64" fill="#0c2344"/>
+  <line x1="0" y1="106" x2="960" y2="106" stroke="#173153" stroke-width="1"/>
+  
+  <!-- Crest / Logo Mark -->
+  <rect x="36" y="56" width="36" height="36" rx="6" fill="#0284c7"/>
+  <text x="54" y="80" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="900" text-anchor="middle">🎓</text>
+  <text x="84" y="72" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="700">NNPC / SEPNU JV Ibeno Host Community Trust</text>
+  <text x="84" y="90" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Undergraduate Scholarship Document Submission Portal</text>
+
+  <rect x="796" y="58" width="128" height="32" rx="4" fill="#0369a1"/>
+  <text x="860" y="78" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Portal ID: IHCDT-2849</text>
+
+  <!-- Application Multi-Step Stepper -->
+  <rect x="36" y="122" width="888" height="52" rx="6" fill="#0c1f3a" stroke="#1b3a63" stroke-width="1"/>
+  
+  <!-- Step 1 Done -->
+  <circle cx="70" cy="148" r="12" fill="#10b981"/>
+  <text x="70" y="152" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">✓</text>
+  <text x="92" y="152" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">1. Biodata</text>
+  <line x1="170" y1="148" x2="250" y2="148" stroke="#10b981" stroke-width="2"/>
+
+  <!-- Step 2 Done -->
+  <circle cx="270" cy="148" r="12" fill="#10b981"/>
+  <text x="270" y="152" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">✓</text>
+  <text x="292" y="152" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">2. Academic Information</text>
+  <line x1="455" y1="148" x2="535" y2="148" stroke="#0284c7" stroke-width="2"/>
+
+  <!-- Step 3 Active -->
+  <circle cx="555" cy="148" r="12" fill="#0284c7"/>
+  <text x="555" y="152" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">3</text>
+  <text x="577" y="152" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="700">3. Document Uploads (Active)</text>
+  <line x1="775" y1="148" x2="835" y2="148" stroke="#173153" stroke-width="2"/>
+
+  <!-- Step 4 Pending -->
+  <circle cx="855" cy="148" r="12" fill="#173153"/>
+  <text x="855" y="152" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">4</text>
+  <text x="877" y="152" fill="#64748b" font-family="system-ui, sans-serif" font-size="13">Review</text>
+
+  <!-- Main Document Intake Surface -->
+  <rect x="36" y="190" width="888" height="326" rx="8" fill="#0b1b33" stroke="#173153" stroke-width="1"/>
+  
+  <text x="64" y="222" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Upload Mandatory Academic &amp; Verification Documents</text>
+  <text x="64" y="242" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Supported formats: PDF, JPG, PNG (Max 5MB per credential). Cloud-stored via Vercel Blob pipeline.</text>
+
+  <!-- Upload Block 1: WAEC / SSCE Certificate -->
+  <rect x="64" y="260" width="410" height="98" rx="6" fill="#081426" stroke="#0284c7" stroke-width="1"/>
+  <circle cx="96" cy="309" r="16" fill="#0369a1"/>
+  <text x="96" y="314" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">PDF</text>
+  <text x="126" y="300" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">WAEC / SSCE Statement of Result</text>
+  <text x="126" y="320" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="11">✓ waec_result_verified.pdf (1.4 MB) — Uploaded</text>
+
+  <!-- Upload Block 2: University Admission Letter -->
+  <rect x="494" y="260" width="402" height="98" rx="6" fill="#081426" stroke="#0284c7" stroke-width="1"/>
+  <circle cx="526" cy="309" r="16" fill="#0369a1"/>
+  <text x="526" y="314" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">PDF</text>
+  <text x="556" y="300" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">University Admission Letter (JAMB/Institution)</text>
+  <text x="556" y="320" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="11">✓ admission_letter_official.pdf (2.1 MB) — Uploaded</text>
+
+  <!-- Upload Block 3: Certificate of Origin -->
+  <rect x="64" y="372" width="410" height="98" rx="6" fill="#081426" stroke="#173153" stroke-width="1"/>
+  <circle cx="96" cy="421" r="16" fill="#173153"/>
+  <text x="96" y="426" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">IMG</text>
+  <text x="126" y="412" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Host Community Origin Attestation</text>
+  <text x="126" y="432" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">Click to select or drag verification letter (PDF/JPG)</text>
+
+  <!-- Upload Block 4: Passport Photo -->
+  <rect x="494" y="372" width="402" height="98" rx="6" fill="#081426" stroke="#173153" stroke-width="1"/>
+  <circle cx="526" cy="421" r="16" fill="#0369a1"/>
+  <text x="526" y="426" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">JPG</text>
+  <text x="556" y="412" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Recent Passport Photograph</text>
+  <text x="556" y="432" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="11">✓ applicant_passport.jpg (640 KB) — Uploaded</text>
+
+  <!-- Footer Actions -->
+  <rect x="746" y="478" width="150" height="34" rx="4" fill="#0284c7"/>
+  <text x="821" y="500" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Save &amp; Continue →</text>
+</svg>

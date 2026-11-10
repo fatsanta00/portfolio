@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <!-- Window frame background -->
+  <rect width="960" height="540" rx="12" fill="#041a13"/>
+  <rect x="0.5" y="0.5" width="959" height="539" rx="11.5" stroke="#064e3b" stroke-width="1"/>
+
+  <!-- Browser Chrome Topbar -->
+  <rect width="960" height="42" fill="#02251a"/>
+  <line x1="0" y1="42" x2="960" y2="42" stroke="#064e3b" stroke-width="1"/>
+  <circle cx="24" cy="21" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="21" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="21" r="5" fill="#10b981"/>
+  <rect x="180" y="10" width="600" height="22" rx="4" fill="#021710" stroke="#064e3b" stroke-width="1"/>
+  <text x="480" y="25" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">https://naijabox.vercel.app</text>
+
+  <!-- Application Navbar -->
+  <rect y="42" width="960" height="56" fill="#053324"/>
+  <line x1="0" y1="98" x2="960" y2="98" stroke="#064e3b" stroke-width="1"/>
+  
+  <!-- NaijaBox Brand -->
+  <rect x="36" y="56" width="28" height="28" rx="6" fill="#10b981"/>
+  <text x="50" y="75" fill="#02251a" font-family="system-ui, sans-serif" font-size="16" font-weight="900" text-anchor="middle">📦</text>
+  <text x="76" y="74" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="800">NaijaBox</text>
+  <text x="156" y="74" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="12" font-weight="500">A box full of things to do</text>
+
+  <!-- Navigation items -->
+  <text x="440" y="74" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">All 11 Boxes</text>
+  <text x="545" y="74" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="13">Slang Dictionary</text>
+  <text x="670" y="74" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="13">Leaderboard</text>
+
+  <!-- Player Stats Badge -->
+  <rect x="806" y="54" width="118" height="32" rx="6" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+  <text x="865" y="74" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" text-anchor="middle">🔥 4-Day Streak</text>
+
+  <!-- Hero Banner Strip inside App -->
+  <rect x="36" y="114" width="888" height="64" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+  <text x="56" y="142" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Nigerian Pop Culture, Social Dilemmas &amp; High-Score Challenges</text>
+  <text x="56" y="162" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12">Zero registration wall · Real-time community statistics · Verified anti-fabrication sample size gates</text>
+  <rect x="760" y="128" width="144" height="36" rx="6" fill="#10b981"/>
+  <text x="832" y="151" fill="#02251a" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Surprise Box ⚡</text>
+
+  <!-- Interactive Boxes Grid (4 real boxes featured) -->
+  <!-- Box 1: How Nigerian Are You? -->
+  <rect x="36" y="196" width="207" height="310" rx="8" fill="#03261c" stroke="#065f46" stroke-width="1"/>
+  <rect x="36" y="196" width="207" height="90" rx="8" fill="#064e3b"/>
+  <text x="139" y="246" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle">🇳🇬</text>
+  <text x="52" y="312" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">How Nigerian Are You?</text>
+  <text x="52" y="332" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="10">Personality Test · 12 Qs</text>
+  <text x="52" y="360" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12" line-height="1.4">Calculate your authentic Naija index across childhood and street instincts.</text>
+  <rect x="52" y="456" width="175" height="34" rx="4" fill="#10b981"/>
+  <text x="139" y="478" fill="#02251a" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Open Box →</text>
+
+  <!-- Box 2: Would You Rather -->
+  <rect x="263" y="196" width="207" height="310" rx="8" fill="#03261c" stroke="#065f46" stroke-width="1"/>
+  <rect x="263" y="196" width="207" height="90" rx="8" fill="#0d5945"/>
+  <text x="366" y="246" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle">🤔</text>
+  <text x="279" y="312" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Naija Would You Rather</text>
+  <text x="279" y="332" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="10">Social Dilemma · Live Stats</text>
+  <text x="279" y="360" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12">Vote on impossible Lagos dilemmas and compare against live community votes.</text>
+  <rect x="279" y="456" width="175" height="34" rx="4" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+  <text x="366" y="478" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Play Dilemmas →</text>
+
+  <!-- Box 3: Guess the Price -->
+  <rect x="490" y="196" width="207" height="310" rx="8" fill="#03261c" stroke="#065f46" stroke-width="1"/>
+  <rect x="490" y="196" width="207" height="90" rx="8" fill="#04684c"/>
+  <text x="593" y="246" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle">🏷️</text>
+  <text x="506" y="312" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Guess the Price</text>
+  <text x="506" y="332" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="10">Market Game · Streaks</text>
+  <text x="506" y="360" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12">Test your real market intelligence on current market prices and daily items.</text>
+  <rect x="506" y="456" width="175" height="34" rx="4" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+  <text x="593" y="478" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Start Guessing →</text>
+
+  <!-- Box 4: Millisecond Reaction Time -->
+  <rect x="717" y="196" width="207" height="310" rx="8" fill="#03261c" stroke="#065f46" stroke-width="1"/>
+  <rect x="717" y="196" width="207" height="90" rx="8" fill="#075e47"/>
+  <text x="820" y="246" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle">⚡</text>
+  <text x="733" y="312" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Reaction Time Test</text>
+  <text x="733" y="332" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="10">Reflex Utility · Milliseconds</text>
+  <text x="733" y="360" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="12">Measure click latency down to milliseconds and earn your reflex percentile badge.</text>
+  <rect x="733" y="456" width="175" height="34" rx="4" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+  <text x="820" y="478" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Test Reflexes →</text>
+</svg>

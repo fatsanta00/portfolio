@@ -129,7 +129,7 @@ export default function Home() {
               <div className="hero-kicker-row">
                 <span className="hero-kicker-tag">BasTech · Bassey Stephen</span>
                 <span className="hero-kicker-divider" aria-hidden="true">/</span>
-                <span className="hero-kicker-location">Akwa Ibom, Nigeria</span>
+                <span className="hero-kicker-location">Nigeria · Available for remote work</span>
               </div>
 
               <h1 className="hero-headline">
@@ -306,7 +306,7 @@ export default function Home() {
                   </div>
                   <div className="detail-entry">
                     <dt>Location</dt>
-                    <dd>Akwa Ibom State, Nigeria</dd>
+                    <dd>Nigeria · Available for remote work</dd>
                   </div>
                   <div className="detail-entry">
                     <dt>Education</dt>
@@ -478,8 +478,8 @@ export default function Home() {
                 </div>
                 <div className="channel-body">
                   <span className="channel-label">LinkedIn</span>
-                  <a href="https://www.linkedin.com/in/bassey2006" target="_blank" rel="noreferrer" className="channel-value channel-value--link">
-                    linkedin.com/in/bassey2006 ↗
+                  <a href="https://www.linkedin.com/in/fatsanta/" target="_blank" rel="noreferrer" className="channel-value channel-value--link">
+                    linkedin.com/in/fatsanta ↗
                   </a>
                   <span className="channel-subtext">Professional network and career connection.</span>
                 </div>
@@ -507,7 +507,7 @@ export default function Home() {
             <div className="footer-links-side">
               <a href="#hero" className="footer-link">Back to Top ↑</a>
               <a href="https://github.com/fatsanta00" target="_blank" rel="noreferrer" className="footer-link">GitHub</a>
-              <a href="https://www.linkedin.com/in/bassey2006" target="_blank" rel="noreferrer" className="footer-link">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/fatsanta/" target="_blank" rel="noreferrer" className="footer-link">LinkedIn</a>
               <a href="mailto:stebassey00@gmail.com" className="footer-link">Email</a>
             </div>
           </div>

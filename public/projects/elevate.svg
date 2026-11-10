@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <!-- Window frame background -->
+  <rect width="960" height="540" rx="12" fill="#0a0a0a"/>
+  <rect x="0.5" y="0.5" width="959" height="539" rx="11.5" stroke="#262626" stroke-width="1"/>
+
+  <!-- Browser Chrome Topbar -->
+  <rect width="960" height="42" fill="#141414"/>
+  <line x1="0" y1="42" x2="960" y2="42" stroke="#262626" stroke-width="1"/>
+  <circle cx="24" cy="21" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="21" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="21" r="5" fill="#10b981"/>
+  <rect x="180" y="10" width="600" height="22" rx="4" fill="#0d0d0d" stroke="#262626" stroke-width="1"/>
+  <text x="480" y="25" fill="#a3a3a3" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">https://elevate-agency.digital</text>
+
+  <!-- Navigation -->
+  <rect y="42" width="960" height="60" fill="#0f0f0f"/>
+  <line x1="0" y1="102" x2="960" y2="102" stroke="#262626" stroke-width="1"/>
+  
+  <text x="48" y="77" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="900" letter-spacing="0.1em">ELEVATE</text>
+  <text x="146" y="77" fill="#d4af37" font-family="'JetBrains Mono', monospace" font-size="11">TALENT &amp; MEDIA</text>
+
+  <text x="560" y="77" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13">Roster</text>
+  <text x="630" y="77" fill="#a3a3a3" font-family="system-ui, sans-serif" font-size="13">Disciplines</text>
+  <text x="730" y="77" fill="#a3a3a3" font-family="system-ui, sans-serif" font-size="13">Case Studies</text>
+
+  <rect x="836" y="56" width="88" height="32" rx="4" fill="#d4af37"/>
+  <text x="880" y="77" fill="#0a0a0a" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Inquire</text>
+
+  <!-- Hero Editorial Headline -->
+  <text x="48" y="156" fill="#d4af37" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" letter-spacing="0.15em">CREATIVE TALENT MANAGEMENT</text>
+  <text x="48" y="196" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.03em">Representing Visionary Creators</text>
+  <text x="48" y="226" fill="#737373" font-family="system-ui, sans-serif" font-size="14">A high-fashion, high-contrast dark aesthetic built with pure semantic HTML5 and modern CSS.</text>
+
+  <!-- Talent Roster Cards Row -->
+  <!-- Card 1 -->
+  <rect x="48" y="254" width="268" height="250" rx="6" fill="#171717" stroke="#262626" stroke-width="1"/>
+  <rect x="48" y="254" width="268" height="150" rx="6" fill="#262626"/>
+  <circle cx="182" cy="329" r="40" fill="#333333"/>
+  <text x="64" y="434" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Maya Sterling</text>
+  <text x="64" y="454" fill="#d4af37" font-family="'JetBrains Mono', monospace" font-size="11">Editorial &amp; Runway · London</text>
+  <text x="64" y="484" fill="#a3a3a3" font-family="system-ui, sans-serif" font-size="12">Vogue UK, Dazed Magazine, Milan FW</text>
+
+  <!-- Card 2 -->
+  <rect x="346" y="254" width="268" height="250" rx="6" fill="#171717" stroke="#262626" stroke-width="1"/>
+  <rect x="346" y="254" width="268" height="150" rx="6" fill="#262626"/>
+  <circle cx="480" cy="329" r="40" fill="#333333"/>
+  <text x="362" y="434" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Dami Kuti</text>
+  <text x="362" y="454" fill="#d4af37" font-family="'JetBrains Mono', monospace" font-size="11">Cinematography &amp; Direction · Lagos</text>
+  <text x="362" y="484" fill="#a3a3a3" font-family="system-ui, sans-serif" font-size="12">Nike Africa, Universal Music Group</text>
+
+  <!-- Card 3 -->
+  <rect x="644" y="254" width="268" height="250" rx="6" fill="#171717" stroke="#262626" stroke-width="1"/>
+  <rect x="644" y="254" width="268" height="150" rx="6" fill="#262626"/>
+  <circle cx="778" cy="329" r="40" fill="#333333"/>
+  <text x="660" y="434" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Julian Vance</text>
+  <text x="660" y="454" fill="#d4af37" font-family="'JetBrains Mono', monospace" font-size="11">3D Sound &amp; Composition · Berlin</text>
+  <text x="660" y="484" fill="#a3a3a3" font-family="system-ui, sans-serif" font-size="12">Bespoke spatial audio &amp; installations</text>
+</svg>
